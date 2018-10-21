@@ -22,18 +22,19 @@ class Product extends React.Component {
     const productPrice = `$${price}`;
     if (isPublished === 'false') {
       return (
-        <div key={productName} className="productWrapper comingSoon">
-          <div className="productName">{productName}</div>
-          <div className="productImg">
-            <img src={productImage} />
-          </div>
-          <div className="productPrice">{productPrice}</div>
-          <div
-            className="addToCartBtn
-            ">
-            <button disabled>Coming Soon</button>
-          </div>
-        </div>
+        <div />
+        // <div key={productName} className="productWrapper comingSoon">
+        //   <div className="productName">{productName}</div>
+        //   <div className="productImg">
+        //     <img src={productImage} />
+        //   </div>
+        //   <div className="productPrice">{productPrice}</div>
+        //   <div
+        //     className="addToCartBtn
+        //     ">
+        //     <button disabled>Coming Soon</button>
+        //   </div>
+        // </div>
       );
     }
     return (
@@ -46,7 +47,9 @@ class Product extends React.Component {
         <div
           className="addToCartBtn
             ">
-          <a className="buttonAdd" onClick={this.handleAddToCart}>Add to cart</a>
+          <a className="buttonAdd" onClick={this.handleAddToCart}>
+            Add to cart
+          </a>
         </div>
       </div>
     );
