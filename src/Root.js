@@ -1,18 +1,15 @@
 import React from 'react';
+import reducers from 'reducers/index';
+
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import reduxPromise from 'redux-promise';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
-import reducers from 'reducers/index';
-
-export default ({ children, initialState = {} }) => {
-	const store = createStore(
-		reducers,
-		initialState,
-		composeWithDevTools(
-			applyMiddleware(reduxPromise),
-		),
-	);
-	return <Provider store={store}>{children}</Provider>;
+export default ({ children }) => {
+  const store = createStore(
+    reducers,
+    composeWithDevTools(applyMiddleware(reduxPromise)),
+  );
+  return <Provider store={store}>{children}</Provider>;
 };

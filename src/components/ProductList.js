@@ -1,16 +1,13 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import * as actions from 'actions/index';
 import Product from './Product';
-import { TELSTRA_ITEMS } from './productsData';
 
-export default class ProductList extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { telstraItems: TELSTRA_ITEMS };
-  }
-
+class ProductList extends React.Component {
   render() {
-    const { telstraItems } = this.state;
-    return telstraItems.map(item => {
+    // console.log("@", this.props);
+    const { availableItems } = this.props;
+    return availableItems.map(item => {
       const { isPublished } = item;
       // console.log(item);
 
@@ -22,3 +19,12 @@ export default class ProductList extends React.Component {
     });
   }
 }
+
+const mapStateToProps = state => ({
+  availableItems: state.availableItems,
+});
+
+export default connect(
+  mapStateToProps,
+  actions,
+)(ProductList);

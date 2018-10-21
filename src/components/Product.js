@@ -12,7 +12,8 @@ class Product extends React.Component {
 
   handleAddToCart = event => {
     event.preventDefault();
-    this.props.saveItem(this.state.productInfo);
+    this.props.saveSelectedItem(this.state.productInfo);
+    this.props.removeAvailableItem(this.state.productInfo);
   };
 
   renderProduct = () => {

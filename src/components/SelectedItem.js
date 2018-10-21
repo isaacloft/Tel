@@ -14,7 +14,9 @@ class SelectedItem extends Component {
   handleAddRemoveFromCart = event => {
     event.preventDefault();
     const indexKey = this.state.indexKey;
-    this.props.removeItem(indexKey);
+    const productInfo = this.state.productInfo;
+    this.props.addAvailableItem(productInfo);
+    this.props.removeSelectedItem(indexKey);
   };
 
   render() {
@@ -22,9 +24,9 @@ class SelectedItem extends Component {
     return (
       <div className="selectedItemWrapper">
         <div className="selectedProduct">
-          <div class="productContent">
-            <div class="selectedProductName">{productName}</div>
-            <div class="selectedProductBtn">
+          <div className="productContent">
+            <div className="selectedProductName">{productName}</div>
+            <div className="selectedProductBtn">
               <a className="buttonRm" onClick={this.handleAddRemoveFromCart}>
                 Remove
               </a>

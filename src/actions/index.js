@@ -1,26 +1,22 @@
-import axios from 'axios';
-import { SAVE_COMMENT, FETCH_COMMENTS, SAVE_ITEM, REMOVE_ITEM } from 'actions/types';
+import {
+  SAVE_SELECTED_ITEM,
+  REMOVE_SELECTED_ITEM,
+  ADD_AVAILABLE_ITEM,
+  REMOVE_AVAILABLE_ITEM,
+} from 'actions/types';
 
-export function saveComment(comment) {
-	return {
-		type: SAVE_COMMENT,
-		payload: comment,
-	};
+export function saveSelectedItem(item) {
+  return { type: SAVE_SELECTED_ITEM, payload: item };
 }
 
-export function saveItem(item) {
-	return { type: SAVE_ITEM, payload: item };
+export function removeSelectedItem(item) {
+  return { type: REMOVE_SELECTED_ITEM, payload: item };
 }
 
-export function removeItem(item) {
-	return { type: REMOVE_ITEM, payload: item };
+export function addAvailableItem(item) {
+  return { type: ADD_AVAILABLE_ITEM, payload: item };
 }
 
-export function fetchComments() {
-	const response = axios.get('http://jsonplaceholder.typicode.com/comments');
-
-	return {
-		type: FETCH_COMMENTS,
-		payload: response,
-	};
+export function removeAvailableItem(item) {
+  return { type: REMOVE_AVAILABLE_ITEM, payload: item };
 }

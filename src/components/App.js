@@ -1,11 +1,10 @@
 import React from 'react';
-import CommentBox from 'components/CommentBox';
-import CommentList from 'components/CommentList';
 import ProductList from 'components/ProductList';
 import SelectedList from 'components/SelectedList';
 
 export default () => {
-  return <div className="mainContainer">
+  return (
+    <div className="mainContainer">
       <div className="mainDisplay">
         <div className="itemsContainer">
           <ProductList />
@@ -19,5 +18,6 @@ export default () => {
           </div>
         </div>
       </div>
-    </div>;
+    </div>
+  );
 };

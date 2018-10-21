@@ -18,7 +18,7 @@ class SelectedList extends Component {
 
   render() {
     const { selectedItems } = this.props;
-    console.log(selectedItems);
+    // console.log(selectedItems);
     if (selectedItems.length < 1) {
       return <div>Your shopping cart is empty.</div>;
     }

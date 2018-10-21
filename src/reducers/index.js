@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
-import commentsReducer from 'reducers/comments';
-import itemsReducer from 'reducers/items';
+import selectedItemsReducer from 'reducers/selectedItems';
+import availableItemsReducer from 'reducers/availableItems';
 
 
 export default combineReducers({
-	comments: commentsReducer,
-	selectedItems: itemsReducer
+  selectedItems: selectedItemsReducer,
+  availableItems: availableItemsReducer,
 });
