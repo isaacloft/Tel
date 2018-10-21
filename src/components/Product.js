@@ -45,7 +45,7 @@ class Product extends React.Component {
         <div
           className="addToCartBtn
             ">
-          <button onClick={this.handleAddToCart}>Add to cart</button>
+          <a className="buttonAdd" onClick={this.handleAddToCart}>Add to cart</a>
         </div>
       </div>
     );
