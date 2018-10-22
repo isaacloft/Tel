@@ -3,7 +3,8 @@ import ProductList from 'components/ProductList';
 import SelectedList from 'components/SelectedList';
 
 export default () => {
-  return <section>
+  return (
+    <section>
       <section>
         <header>
           <article>This is header</article>
@@ -37,14 +38,12 @@ export default () => {
         <footer>
           <p>Telstra Code Challenge by Isaac Guan</p>
           <p>
-            Contact information: 
-            <a href="mailto:isaac.guan@rxpservices.com">
-              Email
-            </a>| <a href="https://www.linkedin.com/in/isaacguanloft/">
-              Linkedin
-            </a>
+            Contact information:
+            <a href="mailto:isaac.guan@rxpservices.com">Email</a>|{' '}
+            <a href="https://www.linkedin.com/in/isaacguanloft/">Linkedin</a>
           </p>
         </footer>
       </section>
-    </section>;
+    </section>
+  );
 };

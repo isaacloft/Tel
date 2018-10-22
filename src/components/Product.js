@@ -27,7 +27,7 @@ class Product extends React.Component {
       <section key={productName} className="productWrapper">
         <p className="productName">{productName}</p>
         <figure className="productImg">
-          <img src={productImage} />
+          <img src={productImage} alt={`This is an image of ${productName}`} />
         </figure>
         <p className="productPrice">{productPrice}</p>
         <section
