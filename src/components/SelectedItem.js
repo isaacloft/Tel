@@ -22,18 +22,20 @@ class SelectedItem extends Component {
   render() {
     const { productName } = this.state.productInfo;
     return (
-      <div className="selectedItemWrapper">
-        <div className="selectedProduct">
-          <div className="productContent">
-            <div className="selectedProductName">{productName}</div>
-            <div className="selectedProductBtn">
+      <section className="selectedItemWrapper">
+        <section className="selectedProduct">
+          <section className="productContent">
+            <article className="selectedProductName">
+              <p>{productName}</p>
+            </article>
+            <section className="selectedProductBtn">
               <a className="buttonRm" onClick={this.handleAddRemoveFromCart}>
                 Remove
               </a>
-            </div>
-          </div>
-        </div>
-      </div>
+            </section>
+          </section>
+        </section>
+      </section>
     );
   }
 }

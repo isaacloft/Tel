@@ -3,6 +3,11 @@ body {
     Arial, sans-serif;
   height: 100%;
 }
+
+p {
+  margin: 3px;
+}
+
 #root {
   display: flex;
   align-items: center;
@@ -15,13 +20,13 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 90vh;
 }
 
 .mainDisplay {
   display: flex;
   flex-direction: row;
-  padding: 50px;
+  padding: 20px;
 }
 
 .productWrapper {
@@ -56,6 +61,10 @@ body {
 
 .cartHeader {
   flex: 1;
+}
+
+.cartHeaderText {
+  margin-bottom: 20px;
 }
 
 .cartContent {
@@ -102,16 +111,7 @@ body {
 }
 .productImg > img {
   width: 60px;
-  height: auto;
-  padding: 5px;
-}
-
-.productName {
-  padding: 5px;
-}
-
-.productImg {
-  padding: 5px;
+  height: 120px;
 }
 
 .productPrice {
@@ -121,7 +121,8 @@ body {
 
 a.buttonRm {
   display: inline-block;
-  padding: 0.3em 1.2em;
+  font-size: 12px;
+  padding: 0.2em 1em;
   border-radius: 2em;
   box-sizing: border-box;
   text-decoration: none;
@@ -137,6 +138,7 @@ a.buttonRm:hover {
 
 a.buttonAdd {
   display: inline-block;
+  font-size: 14px;
   padding: 0.3em 1.2em;
   border-radius: 2em;
   box-sizing: border-box;
@@ -155,7 +157,7 @@ a.buttonAdd:hover {
   .mainDisplay {
     display: flex;
     flex-direction: column-reverse;
-    padding: 10px;
+    margin: 0px;
   }
 
   .cartContainer {
@@ -163,24 +165,44 @@ a.buttonAdd:hover {
     justify-content: flex-start;
     flex-direction: row;
     flex: 1;
-    margin-left: 0px;
+    margin-left: 10px;
+    margin:10px;
   }
 
   .productWrapper {
     display: flex;
     width: 120px;
-    height: 240px;
-    padding: 10px;
-    margin: 10px;
+    height: 190px;
+    padding: 3px;
+    margin: 3px;
+  }
+.productName{
+  font-size: 12px;
+}
+  .productImg {
+    margin: 0px;
   }
 
   .productImg > img {
     width: 40px;
     height: auto;
-    padding: 2px;
   }
   .itemsContainer {
     justify-content: center;
     min-width: 100%;
   }
+
+  a.buttonAdd {
+  display: inline-block;
+  font-size: 12px;
+  padding: 0.3em 1.2em;
+  border-radius: 2em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.92);
+  background-color: #6eb5e4;
+  text-align: center;
+  transition: all 0.2s;
+}
 }

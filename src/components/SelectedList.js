@@ -26,9 +26,9 @@ class SelectedList extends Component {
     return selectedItems.map((item, index) => {
       const notTheBestKey = `${index}${item.productName}`;
       return (
-        <div key={notTheBestKey}>
+        <section key={notTheBestKey}>
           <SelectedItem productInfo={item} indexKey={index} />
-        </div>
+        </section>
       );
     });
   }

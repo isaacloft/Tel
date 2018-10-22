@@ -12,9 +12,9 @@ class ProductList extends React.Component {
       // console.log(item);
 
       return (
-        <div key={item.productName}>
+        <section key={item.productName}>
           <Product item={item} isPublished={isPublished} />
-        </div>
+        </section>
       );
     });
   }

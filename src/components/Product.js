@@ -21,41 +21,27 @@ class Product extends React.Component {
     const isPublished = this.state.isPublished;
     const productPrice = `$${price}`;
     if (isPublished === 'false') {
-      return (
-        <div />
-        // <div key={productName} className="productWrapper comingSoon">
-        //   <div className="productName">{productName}</div>
-        //   <div className="productImg">
-        //     <img src={productImage} />
-        //   </div>
-        //   <div className="productPrice">{productPrice}</div>
-        //   <div
-        //     className="addToCartBtn
-        //     ">
-        //     <button disabled>Coming Soon</button>
-        //   </div>
-        // </div>
-      );
+      return '';
     }
     return (
-      <div key={productName} className="productWrapper">
-        <div className="productName">{productName}</div>
-        <div className="productImg">
+      <section key={productName} className="productWrapper">
+        <p className="productName">{productName}</p>
+        <figure className="productImg">
           <img src={productImage} />
-        </div>
-        <div className="productPrice">{productPrice}</div>
-        <div
+        </figure>
+        <p className="productPrice">{productPrice}</p>
+        <section
           className="addToCartBtn
             ">
           <a className="buttonAdd" onClick={this.handleAddToCart}>
             Add to cart
           </a>
-        </div>
-      </div>
+        </section>
+      </section>
     );
   };
   render() {
-    return <div>{this.renderProduct()}</div>;
+    return <section>{this.renderProduct()}</section>;
   }
 }
 
