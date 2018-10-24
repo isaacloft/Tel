@@ -7,13 +7,11 @@ export default () => {
     <section>
       <section>
         <header>
-          <article>This is header</article>
+          <article />
         </header>
       </section>
       <section>
-        <nav>
-          <a href="">Home</a> | <a href="">Products</a> | <a href="">Plans</a>
-        </nav>
+        <nav />
       </section>
       <main className="mainContainer">
         <section className="mainDisplay">

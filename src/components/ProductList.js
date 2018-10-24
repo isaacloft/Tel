@@ -10,12 +10,13 @@ class ProductList extends React.Component {
     return availableItems.map(item => {
       const { isPublished } = item;
       // console.log(item);
-
-      return (
-        <section key={item.productName}>
-          <Product item={item} isPublished={isPublished} />
-        </section>
-      );
+      if (isPublished === 'true') {
+        return (
+          <section key={item.productName}>
+            <Product item={item} />
+          </section>
+        );
+      }
     });
   }
 }

@@ -20,9 +20,6 @@ class Product extends React.Component {
     const { productName, productImage, price } = this.state.productInfo;
     const isPublished = this.state.isPublished;
     const productPrice = `$${price}`;
-    if (isPublished === 'false') {
-      return '';
-    }
     return (
       <section key={productName} className="productWrapper">
         <p className="productName">{productName}</p>
