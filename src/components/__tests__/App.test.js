@@ -15,6 +15,3 @@ it('shows a list of available products', () => {
   expect(wrapped.find(ProductList).length).toEqual(1);
 });
 
-it('shows a comment list', () => {
-  expect(wrapped.find(SelectedList).length).toEqual(1);
-});

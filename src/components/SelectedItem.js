@@ -7,7 +7,7 @@ class SelectedItem extends Component {
     super(props);
     const productInfo = props.productInfo;
     const indexKey = props.indexKey;
-
+    console.log(props);
     this.state = { productInfo, indexKey };
   }
 

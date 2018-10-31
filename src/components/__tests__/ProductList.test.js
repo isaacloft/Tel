@@ -24,5 +24,4 @@ afterEach(() => {
 it('has five published products from the mocked data', () => {
   expect(wrapped.find(Product).length).toEqual(5);
   console.log(wrapped.find(Product).length);
-  // expect(wrapped.find('button').length).toEqual(1);
 });

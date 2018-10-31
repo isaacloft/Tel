@@ -46,9 +46,8 @@ it('has an image, anchor button, product name and price', () => {
 //     expect(wrapped.find('textarea').prop('value')).toEqual('new comment');
 //   });
 
-//   it('after submit the textarea is emptied', () => {
-//     wrapped.find('form').simulate('submit');
-//     wrapped.update();
-//     expect(wrapped.find('textarea').prop('value')).toEqual('');
-//   });
+// it('after clicking on the anchor tag, the product will be removed ', () => {
+//   wrapped.find('a').simulate('click');
+//   wrapped.update();
+//   expect(wrapped.find('img').length).toEqual(0);
 // });
