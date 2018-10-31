@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import { SAVE_SELECTED_ITEM, REMOVE_SELECTED_ITEM } from 'actions/types';
 
 export default function(state = [], action) {
@@ -6,7 +5,6 @@ export default function(state = [], action) {
     case SAVE_SELECTED_ITEM:
       return [...state, action.payload];
     case REMOVE_SELECTED_ITEM:
-      console.log(state);
       const newArray = state.slice();
       newArray.splice(action.payload, 1);
       return newArray;
