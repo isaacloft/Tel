@@ -5,16 +5,13 @@ import * as actions from 'actions/index';
 class SelectedItem extends Component {
   constructor(props) {
     super(props);
-    const productInfo = props.productInfo;
-    const indexKey = props.indexKey;
-    console.log(props);
+    const { productInfo, indexKey } = props;
     this.state = { productInfo, indexKey };
   }
 
   handleAddRemoveFromCart = event => {
     event.preventDefault();
-    const indexKey = this.state.indexKey;
-    const productInfo = this.state.productInfo;
+    const { indexKey, productInfo } = this.state;
     this.props.addAvailableItem(productInfo);
     this.props.removeSelectedItem(indexKey);
   };

@@ -18,7 +18,6 @@ class Product extends React.Component {
 
   renderProduct = () => {
     const { productName, productImage, price } = this.state.productInfo;
-    const isPublished = this.state.isPublished;
     const productPrice = `$${price}`;
     return (
       <section key={productName} className="productWrapper">

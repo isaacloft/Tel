@@ -5,11 +5,9 @@ import Product from './Product';
 
 class ProductList extends React.Component {
   render() {
-    // console.log("@", this.props);
     const { availableItems } = this.props;
     return availableItems.map(item => {
       const { isPublished } = item;
-      // console.log(item);
       if (isPublished === 'true') {
         return (
           <section key={item.productName}>
