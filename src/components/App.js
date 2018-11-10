@@ -11,7 +11,7 @@ class App extends React.Component {
     return (
       <section>
         <section>
-          <header>
+          <header className="header">
             <article />
           </header>
         </section>

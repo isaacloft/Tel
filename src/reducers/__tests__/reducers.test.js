@@ -7,6 +7,7 @@ import {
   REMOVE_SELECTED_ITEM,
   ADD_AVAILABLE_ITEM,
   REMOVE_AVAILABLE_ITEM,
+  FETCH_AVAILABLE_ITEMS,
 } from 'actions/types';
 
 const testSample = {
@@ -60,6 +61,10 @@ it('availableItemsReducer handles actions of type ADD_AVAILABLE_ITEM and REMOVE_
   };
   const nextState = availableItemsReducer([], removeAction);
   expect(nextState).toEqual([]);
+
+  const fetchAction = { type: FETCH_AVAILABLE_ITEMS, payload: TELSTRA_ITEMS };
+  const newState = availableItemsReducer([], fetchAction);
+  expect(newState).toEqual(TELSTRA_ITEMS);
 });
 
 it('availableItemsReducer handles action with unknown type', () => {

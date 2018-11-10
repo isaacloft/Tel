@@ -24,7 +24,7 @@ export function removeAvailableItem(item) {
 }
 
 export function fetchAvailableItems() {
-  const item = axios.get('https://api.myjson.com/bins/1de90a');
+  const items = axios.get('http://api.myjson.com/bins/1de90a');
 
-  return { type: FETCH_AVAILABLE_ITEMS, payload: item };
+  return { type: FETCH_AVAILABLE_ITEMS, payload: items };
 }

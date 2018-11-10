@@ -1,5 +1,9 @@
 import _ from 'lodash';
-import { ADD_AVAILABLE_ITEM, REMOVE_AVAILABLE_ITEM, FETCH_AVAILABLE_ITEMS } from 'actions/types';
+import {
+  ADD_AVAILABLE_ITEM,
+  REMOVE_AVAILABLE_ITEM,
+  FETCH_AVAILABLE_ITEMS,
+} from 'actions/types';
 import { TELSTRA_ITEMS } from '../components/productsData';
 
 const initialState = TELSTRA_ITEMS;
@@ -15,8 +19,7 @@ export default function(state = [], action) {
       });
       return newArray;
     case FETCH_AVAILABLE_ITEMS:
-      const items = action.payload.data;
-      // console.log(items);
+      const items = action.payload.data ? action.payload.data : initialState;
       return [...state, ...items];
     default:
       return state;
